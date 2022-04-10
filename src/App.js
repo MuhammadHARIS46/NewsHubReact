@@ -12,17 +12,19 @@ export default class App extends Component {
         <Router>
           <NavBar />
           <Routes>
-            <Route exact path="/">  <News key="general" pageSize={this.pageSize} country="in" category="general"/> </Route>
-            <Route exact path="/business">  <News key="business" pageSize={this.pageSize} country="in" category="business"/> </Route>
-            <Route exact path="/entertainment">  <News key="entertainment" pageSize={this.pageSize} country="in" category="entertainment"/> </Route>
-            <Route exact path="/sports">  <News key="sports" pageSize={this.pageSize} country="in" category="sports"/> </Route>
-            <Route exact path="/technology">  <News key="technology" pageSize={this.pageSize} country="in" category="technology"/> </Route>
-            <Route exact path="/health">  <News key="health" pageSize={this.pageSize} country="in" category="health"/> </Route>
-            <Route exact path="/science">  <News key="general" pageSize={this.pageSize} country="in" category="science"/> </Route>
-            <Route exact path="/general">  <News key="general" pageSize={this.pageSize} country="in" category="general"/> </Route>
+            <Route path="/" exact element={<News key="general" pageSize={this.pageSize} country="in" category="general"/> }/>  
+            <Route path="/business" exact element={ <News key="business" pageSize={this.pageSize} country="in" category="business"/> } /> 
+            <Route path="/entertainment" exact element={<News key="entertainment" pageSize={this.pageSize} country="in" category="entertainment"/>} />   
+            <Route  path="/sports" exact element={ <News key="sports" pageSize={this.pageSize} country="in" category="sports"/> }/> 
+            <Route path="/technology" exact element={<News key="technology" pageSize={this.pageSize} country="in" category="technology"/> } />  
+            <Route  path="/health" exact element={<News key="health" pageSize={this.pageSize} country="in" category="health"/> }/>  
+            <Route path="/science" exact element={<News key="general" pageSize={this.pageSize} country="in" category="science"/> } />  
+            <Route path="general"exact element={<News key="general" pageSize={this.pageSize} country="in" category="general"/> } />  
           </Routes>
        </Router>
+       
       </div>
+      
     );
   }
 }
